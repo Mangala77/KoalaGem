@@ -1,0 +1,9 @@
+	
+<%= form_tag( { :action => 'upload' }, :multipart => true ) do %>
+  Upload file: <%= file_field( "form", "file" ) %>
+  <br /> <br /> 
+  <%= submit_tag "Authenticate this Facebook app", :class=>"button" %>
+
+<%#= link_to 'Authenticate this Facebook app', :class=>"button"%>
+<% end %>
+

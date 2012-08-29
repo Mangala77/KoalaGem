@@ -1,0 +1,15 @@
+
+
+<%#= image_tag("/upload/#{params[:form][:file].original_filename}")%>
+<html>
+<body style="background-color:#e5faff;">
+<%= form_tag( { :action => 'upload' }, :multipart => true ) do %>
+  <h8 style="color:#41342D;font-weight: normal; font-size:14px;">Upload file:</h8> <%= file_field( "form", "file" ) %><br/><br/>
+ <h8 style="color:#41342D;font-weight: normal; font-size:14px;">Please give description: </h8><%= text_area "form", "description",:size => '50x10' %>
+ <br /> <br />  <br /> <br /> 
+  <%= image_submit_tag("/images/facebook.png",:style=>"width:175px;height:35px;") %>
+
+<% end %>
+</body>
+</html>
+
